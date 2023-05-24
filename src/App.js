@@ -49,21 +49,21 @@ export default function App() {
                 <Navigate to="/dashboard" replace />
               ) : (
                 <Navigate
-                  to="/"
+                  to="/login"
                   replace
                   state={{ from: window.location.pathname }}
                 />
               )
             }
           />
-          <Route path="/" element={<AuthPage setUser={setUser} />} />
+          <Route path="/login" element={<AuthPage setUser={setUser} />} />
           <Route
             path="/dashboard"
             element={
               user ? (
                 <RestOfAppPage setUser={setUser} />
               ) : (
-                <Navigate to="/" replace state={{ from: '/dashboard' }} />
+                <Navigate to="/login" replace state={{ from: '/dashboard' }} />
               )
             }
           />
