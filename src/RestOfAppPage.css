@@ -1,0 +1,77 @@
+.task-manager-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.task-form input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 3px;
+}
+
+.add-task-button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.sign-out-button {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #e53935;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-name {
+  flex-grow: 1;
+}
+.sign-out-message {
+  margin-top: 10px;
+  color: #4caf50;
+  font-size: 14px;
+}
+.delete-task-button {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #e53935;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
