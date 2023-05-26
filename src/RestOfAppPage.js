@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/firestore'
-import './RestOfAppPage.css'
+import './cssFolder/RestOfAppPage.css'
+import logo from './images/Story-Tell.png' // Import the logo image
 
 const RestOfAppPage = ({ setUser }) => {
   const [tasks, setTasks] = useState([])
@@ -58,6 +59,12 @@ const RestOfAppPage = ({ setUser }) => {
 
   return (
     <div className="task-manager-container">
+      <nav className="navbar">
+        <div className="logo-container">
+          <img src={logo} alt="Logo" className="logo" /> {/* Add the logo */}
+        </div>
+      </nav>
+
       <h2>Task Manager</h2>
       <div className="task-form">
         <input

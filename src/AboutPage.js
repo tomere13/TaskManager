@@ -5,22 +5,13 @@ import './cssFolder/AboutPage.css'
 
 const AboutPage = () => {
   return (
-    <div
-      className="auth-container"
-      style={{
-        backgroundImage: `linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(${storyBg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}>
+    <div className="auth-container">
       <nav className="navbar">
         <div className="logo-container">
           <img src={logo} alt="Logo" className="logo" /> {/* Add the logo */}
         </div>
       </nav>
       <div class="navA">
-        <input type="checkbox"></input>
-        <span></span>
-        <span></span>
         <div class="menuA">
           <li>
             <a href="/">home</a>
@@ -41,10 +32,26 @@ const AboutPage = () => {
       </div>
       <div className="white-box">
         <div className="home-content">
-          <h2>About Page</h2>
+          <h2 style={{ textAlign: 'center' }}>About</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            malesuada est sed neque porta, a interdum felis efficitur.
+            Welcome to our Story Tell about page! We are a passionate team of
+            storytellers dedicated to providing a unique and immersive writing
+            experience. At Story Tell, we believe that the power of storytelling
+            lies not only in the hands of one author but in the collective
+            imagination of many. Our platform is designed to foster
+            collaboration and community, enabling writers from all walks of life
+            to come together and create extraordinary tales. Whether you are an
+            aspiring author looking to hone your skills or a seasoned writer
+            seeking fresh perspectives, Story Tell is the perfect place for you.
+            With our user-friendly interface, you can start a story and invite
+            others to join in, adding their own creative flair to your
+            narrative. The collaborative process ensures that each story becomes
+            a harmonious blend of diverse voices and ideas, resulting in truly
+            remarkable works of art. Join our vibrant community and unlock a
+            world of endless storytelling possibilities. Let's embark on this
+            journey together, where every page is an opportunity to inspire,
+            connect, and ignite the imagination of readers worldwide. Discover
+            the magic of shared storytelling at Story Tell today!
           </p>
           {/* <div className="auth-buttons">
             <button className="login-button" onClick={handleLogin}>

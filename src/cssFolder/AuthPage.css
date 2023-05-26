@@ -31,7 +31,10 @@ image {
   padding: 20px;
   width: 1050px;
   height: 200px;
-  border-radius: 8px;
+  border-radius: 50px;
+  border-left: 5px solid #883d1a;
+  border-right: 5px solid #883d1a;
+  border-bottom: 5px solid #883d1a;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -109,13 +112,9 @@ body,
 .menuAuth {
   margin: 0;
   padding: 0;
-  width: 0;
+  width: 1000px;
   overflow: hidden;
   transition: 0.5s;
-}
-
-.navAuth input:checked ~ .menuAuth {
-  width: 1000px;
 }
 
 .menuAuth li {

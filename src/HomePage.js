@@ -18,20 +18,20 @@ const HomePage = () => {
   return (
     <div
       className="auth-container"
-      style={{
-        backgroundImage: `linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(${storyBg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}>
+      // style={{
+      //   backgroundImage: `linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(${storyBg})`,
+      //   backgroundSize: 'cover',
+      //   backgroundPosition: 'center',
+      // }}
+    >
       <nav className="navbar">
         <div className="logo-container">
           <img src={logo} alt="Logo" className="logo" /> {/* Add the logo */}
         </div>
       </nav>
       <div class="nav">
-        <input type="checkbox"></input>
-        <span></span>
-        <span></span>
+        {/* <input type="checkbox"></input> */}
+
         <div class="menu">
           <li>
             <a href="/">home</a>

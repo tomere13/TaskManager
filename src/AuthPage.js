@@ -24,7 +24,7 @@ const AuthPage = ({ setUser }) => {
     try {
       await firebase.auth().signInWithEmailAndPassword(email, password)
       setUser(firebase.auth().currentUser)
-      navigate('/dashboard')
+      navigate('/main')
     } catch (error) {
       setError(error.message)
     }
@@ -35,22 +35,13 @@ const AuthPage = ({ setUser }) => {
   }
 
   return (
-    <div
-      className="auth-container"
-      style={{
-        backgroundImage: `linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(${storyBg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}>
+    <div className="auth-container">
       <nav className="navbar">
         <div className="logo-container">
           <img src={logo} alt="Logo" className="logo" /> {/* Add the logo */}
         </div>
       </nav>
       <div class="navAuth">
-        <input type="checkbox"></input>
-        <span></span>
-        <span></span>
         <div class="menuAuth">
           <li>
             <a href="/">home</a>

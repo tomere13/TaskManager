@@ -5,6 +5,8 @@ import 'firebase/compat/auth'
 
 // Components
 import HomePage from './HomePage'
+import MainPage from './MainPage'
+
 import AuthPage from './AuthPage'
 import Register from './Register'
 import RestOfAppPage from './RestOfAppPage'
@@ -35,7 +37,16 @@ export default function App() {
   }, [])
 
   if (isLoading) {
-    return <div>Loading...</div>
+    return (
+      <div class="book">
+        <div class="book__pg-shadow"></div>
+        <div class="book__pg"></div>
+        <div class="book__pg book__pg--2"></div>
+        <div class="book__pg book__pg--3"></div>
+        <div class="book__pg book__pg--4"></div>
+        <div class="book__pg book__pg--5"></div>
+      </div>
+    )
   }
 
   return (
@@ -55,6 +66,16 @@ export default function App() {
                 <RestOfAppPage setUser={setUser} />
               ) : (
                 <Navigate to="/login" replace state={{ from: '/dashboard' }} />
+              )
+            }
+          />
+          <Route
+            path="/main"
+            element={
+              user ? (
+                <MainPage setUser={setUser} />
+              ) : (
+                <Navigate to="/login" replace state={{ from: '/main' }} />
               )
             }
           />
