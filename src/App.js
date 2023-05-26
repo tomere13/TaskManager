@@ -2,11 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/auth'
-import './App.css'
 
 // Components
+import HomePage from './HomePage'
 import AuthPage from './AuthPage'
+import Register from './Register'
 import RestOfAppPage from './RestOfAppPage'
+import ContactPage from './ContactPage'
+import AboutPage from './AboutPage'
 
 export default function App() {
   const [user, setUser] = useState(null)
@@ -38,25 +41,13 @@ export default function App() {
   return (
     <div>
       <BrowserRouter>
-        {user == '0' && (
-          <p className="sign-out-message">'User signed out successfully'</p>
-        )}
         <Routes>
-          <Route
-            path="/"
-            element={
-              user ? (
-                <Navigate to="/dashboard" replace />
-              ) : (
-                <Navigate
-                  to="/login"
-                  replace
-                  state={{ from: window.location.pathname }}
-                />
-              )
-            }
-          />
+          <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<AuthPage setUser={setUser} />} />
+          <Route path="/register" element={<Register setUser={setUser} />} />
+          <Route path="/contact" element={<ContactPage setUser={setUser} />} />
+          <Route path="/about" element={<AboutPage setUser={setUser} />} />
+
           <Route
             path="/dashboard"
             element={
