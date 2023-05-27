@@ -69,12 +69,12 @@ const ContactPage = ({ setUser }) => {
             <>
               <li>
                 <button className="menuBtn" onClick={handleLoginPage}>
-                  sign in
+                  log in
                 </button>
               </li>
               <li>
                 <button className="menuBtn" onClick={handleRegister}>
-                  sign up
+                  register
                 </button>
               </li>
             </>

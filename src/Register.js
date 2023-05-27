@@ -99,7 +99,7 @@ const Register = ({ setUser }) => {
         {error && <p className="error-message">{error}</p>}
         <div className="auth-buttons">
           <button className="signup-button" onClick={handleSignUp}>
-            Sign Up
+            Register
           </button>
         </div>
       </div>

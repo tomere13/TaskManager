@@ -71,12 +71,12 @@ const HomePage = ({ setUser }) => {
             <>
               <li>
                 <button className="menuBtn" onClick={handleLoginPage}>
-                  sign in
+                  log in
                 </button>
               </li>
               <li>
                 <button className="menuBtn" onClick={handleRegister}>
-                  sign up
+                  register
                 </button>
               </li>
             </>
@@ -127,7 +127,7 @@ const HomePage = ({ setUser }) => {
               Log In
             </button>
             <button className="signup-button" onClick={handleRegister}>
-              Sign Up
+              Register
             </button>
           </div>
         </div>
