@@ -2,8 +2,25 @@ import React from 'react'
 import storyBg from './images/Story-Bg-4.jpg'
 import logo from './images/Story-Tell.png' // Import the logo image
 import './cssFolder/ContactPage.css'
+import { useNavigate } from 'react-router-dom'
 
 const ContactPage = () => {
+  const navigate = useNavigate()
+  const handleRegister = () => {
+    navigate('/register')
+  }
+  const handleLoginPage = () => {
+    navigate('/login')
+  }
+  const handleHome = () => {
+    navigate('/')
+  }
+  const handleAbout = () => {
+    navigate('/about')
+  }
+  const handleContact = () => {
+    navigate('/contact')
+  }
   return (
     <div className="auth-container">
       <nav className="navbar">
@@ -14,19 +31,29 @@ const ContactPage = () => {
       <div class="navC">
         <div class="menuC">
           <li>
-            <a href="/">home</a>
+            <button className="menuBtn" onClick={handleHome}>
+              home
+            </button>
           </li>
           <li>
-            <a href="/about">about</a>
+            <button className="menuBtn" onClick={handleAbout}>
+              about
+            </button>
           </li>
           <li>
-            <a href="/contact">contactos</a>
+            <button className="menuBtn" onClick={handleContact}>
+              contact
+            </button>
           </li>
           <li>
-            <a href="/login">sign in</a>
+            <button className="menuBtn" onClick={handleLoginPage}>
+              sign in
+            </button>
           </li>
           <li>
-            <a href="/register">sign up</a>
+            <button className="menuBtn" onClick={handleRegister}>
+              sign up
+            </button>
           </li>
         </div>
       </div>

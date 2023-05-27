@@ -6,13 +6,20 @@ import './cssFolder/HomePage.css'
 
 const HomePage = () => {
   const navigate = useNavigate()
-
-  const handleLogin = () => {
+  const handleRegister = () => {
+    navigate('/register')
+  }
+  const handleLoginPage = () => {
     navigate('/login')
   }
-
-  const handleSignUp = () => {
-    navigate('/register')
+  const handleHome = () => {
+    navigate('/')
+  }
+  const handleAbout = () => {
+    navigate('/about')
+  }
+  const handleContact = () => {
+    navigate('/contact')
   }
 
   return (
@@ -34,19 +41,29 @@ const HomePage = () => {
 
         <div class="menu">
           <li>
-            <a href="/">home</a>
+            <button className="menuBtn" onClick={handleHome}>
+              home
+            </button>
           </li>
           <li>
-            <a href="/about">about</a>
+            <button className="menuBtn" onClick={handleAbout}>
+              about
+            </button>
           </li>
           <li>
-            <a href="/contact">contact</a>
+            <button className="menuBtn" onClick={handleContact}>
+              contact
+            </button>
           </li>
           <li>
-            <a href="/login">sign in</a>
+            <button className="menuBtn" onClick={handleLoginPage}>
+              sign in
+            </button>
           </li>
           <li>
-            <a href="/register">sign up</a>
+            <button className="menuBtn" onClick={handleRegister}>
+              sign up
+            </button>
           </li>
         </div>
       </div>
@@ -71,10 +88,10 @@ const HomePage = () => {
             unfold.
           </p>
           <div className="auth-buttons">
-            <button className="login-button" onClick={handleLogin}>
+            <button className="login-button" onClick={handleLoginPage}>
               Log In
             </button>
-            <button className="signup-button" onClick={handleSignUp}>
+            <button className="signup-button" onClick={handleRegister}>
               Sign Up
             </button>
           </div>
