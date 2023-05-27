@@ -88,7 +88,7 @@ const CreateBook = ({ setUser }) => {
   }
 
   return (
-    <div className="white-box">
+    <div className="auth-container">
       <nav className="navbar">
         <div className="logo-container">
           <img src={logo} alt="Logo" className="logo" />
@@ -128,47 +128,55 @@ const CreateBook = ({ setUser }) => {
           </li>
         </div>
       </div>
-      <div className="input-container">
-        <h2>Create a New Book</h2>
-        <label>Book Name:</label>
-        <input
-          type="text"
-          value={bookName}
-          onChange={(e) => setBookName(e.target.value)}
-        />
+      <div className="white-box">
+        <div className="input-container">
+          <h2>Create a New Book</h2>
+          <label>Book Name:</label>
+          <input
+            type="text"
+            value={bookName}
+            onChange={(e) => setBookName(e.target.value)}
+          />
 
-        <label>Author:</label>
-        <input
-          type="text"
-          value={author}
-          onChange={(e) => setAuthor(e.target.value)}
-        />
-      </div>
-      <div className="chapter-container">
-        <label>Chapters:</label>
-        {chapters.map((chapter, index) => (
-          <div className="chapter-input" key={index}>
-            <input
-              type="text"
-              value={chapter}
-              onChange={(e) => handleChapterChange(index, e.target.value)}
-            />
-            {index > 0 && (
-              <button
-                className="remove-chapter-btn"
-                onClick={() => handleRemoveChapter(index)}>
-                Remove Chapter
-              </button>
-            )}
-          </div>
-        ))}
-        <button className="add-chapter-btn" onClick={handleAddChapter}>
-          Add Chapter
+          <label>Author:</label>
+          <input
+            type="text"
+            value={author}
+            onChange={(e) => setAuthor(e.target.value)}
+          />
+        </div>
+        <div className="chapter-container">
+          <label>Chapters:</label>
+          {chapters.map((chapter, index) => (
+            <div className="chapter-input" key={index}>
+              <input
+                type="text"
+                value={chapter}
+                onChange={(e) => handleChapterChange(index, e.target.value)}
+              />
+              {index > 0 && (
+                <button
+                  className="remove-chapter-btn"
+                  onClick={() => handleRemoveChapter(index)}>
+                  Remove Chapter
+                </button>
+              )}
+            </div>
+          ))}
+          <button className="add-chapter-btn" onClick={handleAddChapter}>
+            Add Chapter
+          </button>
+        </div>
+        <button className="create-book-btn" onClick={handleCreateBook}>
+          Create Book
         </button>
       </div>
-      <button className="create-book-btn" onClick={handleCreateBook}>
-        Create Book
-      </button>
+      <div className="credits">
+        <p>
+          Website designed and developed by: Tomer Elimelech Thank you for
+          visiting!
+        </p>
+      </div>
     </div>
   )
 }

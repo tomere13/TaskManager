@@ -103,7 +103,7 @@ const MainPage = ({ setUser }) => {
   console.log(books)
 
   return (
-    <div>
+    <div className="auth-container">
       {console.log(books)}
       <nav className="navbar">
         <div className="logo-container">
@@ -165,6 +165,12 @@ const MainPage = ({ setUser }) => {
             Next
           </button>
         </div>
+      </div>
+      <div className="credits">
+        <p>
+          Website designed and developed by: Tomer Elimelech Thank you for
+          visiting!
+        </p>
       </div>
     </div>
   )

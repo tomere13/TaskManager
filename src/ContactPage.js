@@ -117,6 +117,12 @@ const ContactPage = ({ setUser }) => {
           </div> */}
         </div>
       </div>
+      <div className="credits">
+        <p>
+          Website designed and developed by: Tomer Elimelech Thank you for
+          visiting!
+        </p>
+      </div>
     </div>
   )
 }

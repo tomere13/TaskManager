@@ -1,14 +1,10 @@
 .navbar {
-  position: fixed;
+  position: relative;
+  padding-top: 10px;
   top: 0;
   left: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #f5f5f5;
-  padding: 10px 20px;
-  z-index: 999;
 }
 .logo-container {
   width: 250px;
@@ -84,13 +80,10 @@ body,
 }
 
 .nav {
-  position: fixed;
   background-color: #fff;
   padding: 20px;
-  transition: 0.5s;
   border-radius: 50px;
-  overflow: hidden;
-  bottom: 71%;
+  margin: 15px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -186,4 +179,16 @@ body,
 
 .menuBtn:active {
   background-color: #e8e8e8;
+}
+.credits {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.credits p {
+  margin: 0;
+  font-size: 14px;
+  color: #979797;
 }

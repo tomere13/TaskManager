@@ -42,19 +42,12 @@ const HomePage = ({ setUser }) => {
     navigate('/')
   }
   return (
-    <div
-      className="auth-container"
-      // style={{
-      //   backgroundImage: `linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(${storyBg})`,
-      //   backgroundSize: 'cover',
-      //   backgroundPosition: 'center',
-      // }}
-    >
-      <nav className="navbar">
+    <div className="auth-container-home">
+      <div className="navbar">
         <div className="logo-container">
           <img src={logo} alt="Logo" className="logo" /> {/* Add the logo */}
         </div>
-      </nav>
+      </div>
       <div className="nav">
         {/* <input type="checkbox"></input> */}
 
@@ -138,6 +131,12 @@ const HomePage = ({ setUser }) => {
             </button>
           </div>
         </div>
+      </div>
+      <div className="credits">
+        <p>
+          Website designed and developed by: Tomer Elimelech Thank you for
+          visiting!
+        </p>
       </div>
     </div>
   )

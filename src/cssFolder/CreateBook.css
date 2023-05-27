@@ -89,13 +89,10 @@ body,
 }
 
 .navCreate {
-  position: fixed;
   background-color: #fff;
   padding: 20px;
-  transition: 0.5s;
   border-radius: 50px;
-  overflow: hidden;
-  bottom: 71%;
+  margin: 15px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -173,4 +170,28 @@ body,
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.credits {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.credits p {
+  margin: 0;
+  font-size: 14px;
+  color: #979797;
+}
+.credits {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.credits p {
+  margin: 0;
+  font-size: 14px;
+  color: #979797;
 }
