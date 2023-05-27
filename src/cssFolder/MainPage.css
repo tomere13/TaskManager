@@ -2,7 +2,6 @@
   width: 1050px;
   height: 1000px;
   margin: 0 auto;
-  background-color: white;
   padding: 20px;
   border-radius: 50px;
   margin-bottom: 50px;
@@ -213,7 +212,7 @@ body,
 }
 
 .navM {
- background-color: #fff;
+  background-color: #fff;
   padding: 20px;
   border-radius: 50px;
   margin: 15px;
