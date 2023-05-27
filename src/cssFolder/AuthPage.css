@@ -202,7 +202,7 @@ body,
   font-size: 14px;
   color: #979797;
 }
-@media only screen and (min-width: 428px) {
+@media only screen and (max-width: 428px) {
   .logo-container {
     width: 0%;
     position: relative;
