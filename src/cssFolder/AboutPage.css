@@ -168,28 +168,12 @@ body,
   font-size: 14px;
   color: #979797;
 }
-@media only screen and (max-width: 600px) {
-  .logo-container {
-    width: 0%;
-    position: relative;
-    left: 1%;
-    margin: 0 auto;
-  }
-  .navA {
-    width: 59%;
-    left: 35%;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 50px;
-    margin: 15px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    position: relative;
-  }
+@media only screen and (max-device-width: 428px) and (max-device-height: 926px) {
   .white-box {
     position: relative;
-    width: 635px;
-    left: 35%;
-    height: 500px;
+    width: 350px;
+    left: 31%;
+    height: 546px;
     margin: 5px;
     background-color: #fff;
     padding: 20px;
@@ -197,6 +181,52 @@ body,
     border-left: 5px solid #2f1986;
     border-right: 5px solid #2f1986;
     border-bottom: 5px solid #2f1986;
+  }
+  .home-content p {
+    font-size: 15px;
+    color: #777;
+    margin-bottom: 20px;
+  }
+  .menuBtn {
+    display: inline-block;
+    padding: 12px 5px;
+    border: none;
+    border-radius: 30px;
+    background-color: #2f198611;
+    color: #2f1986;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  .navbar {
+    position: relative;
+    padding-top: 10px;
+    right: 16%;
+    background-color: #f5f5f5;
+  }
+  .logo-container {
+    width: 33%;
+    position: relative;
+    left: 0%;
+    margin: 0 auto;
+  }
+  .navA {
+    width: 33.5%;
+    left: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 50px;
+    margin: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  .credits p {
+    margin: 0;
+    font-size: 12px;
+    color: #979797;
   }
   .credits {
     left: 18%;
