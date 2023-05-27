@@ -27,9 +27,9 @@ image {
   width: 1050px;
   height: 200px;
   border-radius: 50px;
-  border-left: 5px solid #883d1a;
-  border-right: 5px solid #883d1a;
-  border-bottom: 5px solid #883d1a;
+  border-left: 5px solid #2f1986;
+  border-right: 5px solid #2f1986;
+  border-bottom: 5px solid #2f1986;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -168,7 +168,7 @@ body,
   border: none;
   border-radius: 30px;
   background-color: #dbd7d5c7;
-  color: #633d2c;
+  color: #2f1986;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   text-transform: uppercase;

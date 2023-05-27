@@ -12,9 +12,9 @@
   background-color: #fff;
   padding: 20px;
   border-radius: 50px;
-  border-left: 5px solid #883d1a;
-  border-right: 5px solid #883d1a;
-  border-bottom: 5px solid #883d1a;
+  border-left: 5px solid #2f1986;
+  border-right: 5px solid #2f1986;
+  border-bottom: 5px solid #2f1986;
 }
 .task-form {
   display: flex;
@@ -68,7 +68,7 @@
 
 .front,
 .back {
-  background: #883d1a;
+  background: #2f1986;
 }
 
 .front,

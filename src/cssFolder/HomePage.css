@@ -24,9 +24,9 @@
   background-color: white;
   padding: 20px;
   border-radius: 50px;
-  border-left: 5px solid #883d1a;
-  border-right: 5px solid #883d1a;
-  border-bottom: 5px solid #883d1a;
+  border-left: 5px solid #2f1986;
+  border-right: 5px solid #2f1986;
+  border-bottom: 5px solid #2f1986;
 }
 
 .home-content {
@@ -113,7 +113,7 @@ body,
 }
 
 .menu li a:hover {
-  color: #883d1a;
+  color: #2f1986;
 }
 
 .nav input {
