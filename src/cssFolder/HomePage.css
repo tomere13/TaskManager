@@ -193,3 +193,42 @@ body,
   font-size: 14px;
   color: #979797;
 }
+@media only screen and (min-width: 428px) {
+  .logo-container {
+    width: 0%;
+    position: relative;
+    left: 1%;
+    margin: 0 auto;
+  }
+  .nav {
+    width: 59%;
+    left: 35%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 50px;
+    margin: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  .white-box {
+    position: relative;
+    width: 635px;
+    left: 35%;
+    height: 500px;
+    margin: 5px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 50px;
+    border-left: 5px solid #2f1986;
+    border-right: 5px solid #2f1986;
+    border-bottom: 5px solid #2f1986;
+  }
+  .credits {
+    left: 18%;
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+  }
+}

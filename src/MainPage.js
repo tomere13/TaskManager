@@ -31,6 +31,8 @@ const MainPage = ({ setUser }) => {
   const [displayedBooks, setDisplayedBooks] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
+  const [isLoading, setIsLoading] = useState(true)
+
   const navigate = useNavigate()
 
   const handleLoginOut = async () => {
@@ -86,6 +88,7 @@ const MainPage = ({ setUser }) => {
     const endIndex = startIndex + 6
     const displayedBooksSlice = books.slice(startIndex, endIndex)
     setDisplayedBooks(displayedBooksSlice)
+    setIsLoading(false)
   }, [books, currentPage])
 
   const handleNextPage = () => {
@@ -99,7 +102,14 @@ const MainPage = ({ setUser }) => {
       setCurrentPage((prevPage) => prevPage - 1)
     }
   }
-
+  if (isLoading) {
+    return (
+      <div className="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    )
+  }
   console.log(books)
 
   return (

@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/auth'
-import storyBg from './images/Story-Bg-2.jpg'
 import logo from './images/Story-Tell.png' // Import the logo image
 import './cssFolder/AuthPage.css'
 

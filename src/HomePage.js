@@ -1,6 +1,5 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import storyBg from './images/Story-Bg-4.jpg'
 import logo from './images/Story-Tell.png' // Import the logo image
 import './cssFolder/HomePage.css'
 import firebase from 'firebase/compat/app'

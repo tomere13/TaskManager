@@ -1,8 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import firebase from 'firebase/compat/app'
-
-import storyBg from './images/Story-Bg-4.jpg'
 import logo from './images/Story-Tell.png'
 import './cssFolder/AboutPage.css'
 

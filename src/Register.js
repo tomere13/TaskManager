@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom'
 
 import 'firebase/compat/auth'
 import './cssFolder/register.css'
-import storyBg from './images/Story-Bg-4.jpg'
 import logo from './images/Story-Tell.png' // Import the logo image
 
 const Register = ({ setUser }) => {

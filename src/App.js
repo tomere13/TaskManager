@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/auth'
-
+import './cssFolder/App.css'
 // Components
 import HomePage from './HomePage'
 import MainPage from './MainPage'
@@ -34,7 +34,12 @@ export default function App() {
   }, [])
 
   if (isLoading) {
-    return <p>Loading</p>
+    return (
+      <div className="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    )
   }
 
   return (

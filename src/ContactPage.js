@@ -1,5 +1,4 @@
 import React from 'react'
-import storyBg from './images/Story-Bg-4.jpg'
 import logo from './images/Story-Tell.png' // Import the logo image
 import './cssFolder/ContactPage.css'
 import { useNavigate } from 'react-router-dom'
