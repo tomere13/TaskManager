@@ -375,7 +375,7 @@ body,
     opacity: 0;
   }
 }
-@media only screen and (max-width: 428px) {
+@media only screen and (max-width: 600px) {
   .logo-container {
     width: 0%;
     position: relative;
