@@ -107,7 +107,7 @@ const MainPage = ({ setUser }) => {
       {console.log(books)}
       <nav className="navbar">
         <div className="logo-container">
-          <img src={logo} alt="Logo" className="logo" />
+          <img src={logo} alt="Logo" className="logo" onClick={handleHome} />
         </div>
       </nav>
       <div className="navM">

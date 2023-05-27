@@ -45,7 +45,8 @@ const HomePage = ({ setUser }) => {
     <div className="auth-container-home">
       <div className="navbar">
         <div className="logo-container">
-          <img src={logo} alt="Logo" className="logo" /> {/* Add the logo */}
+          <img src={logo} alt="Logo" className="logo" onClick={handleHome} />{' '}
+          {/* Add the logo */}
         </div>
       </div>
       <div className="nav">

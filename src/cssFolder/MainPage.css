@@ -8,6 +8,7 @@
 }
 .white-box {
   width: 1000px;
+  height: 500px;
   margin: 5px;
   background-color: #fff;
   padding: 20px;
@@ -38,8 +39,8 @@
 }
 .books-container {
   position: relative;
-  top: 19%;
-  right: 7%;
+  top: 0%;
+  right: 9%;
   display: grid;
   grid-template-columns: 33% 33% 33%;
   column-gap: 20px;

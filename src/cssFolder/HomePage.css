@@ -19,9 +19,10 @@
 }
 
 .white-box {
-  width: 1050px;
-  margin: 0 auto;
-  background-color: white;
+  width: 1000px;
+  height: 500px;
+  margin: 5px;
+  background-color: #fff;
   padding: 20px;
   border-radius: 50px;
   border-left: 5px solid #2f1986;
