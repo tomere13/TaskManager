@@ -1,17 +1,21 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import firebase from 'firebase/compat/app'
 
 import storyBg from './images/Story-Bg-4.jpg'
-import logo from './images/Story-Tell.png' // Import the logo image
+import logo from './images/Story-Tell.png'
 import './cssFolder/AboutPage.css'
 
-const AboutPage = () => {
+const AboutPage = ({ setUser }) => {
   const navigate = useNavigate()
   const handleRegister = () => {
     navigate('/register')
   }
   const handleLoginPage = () => {
     navigate('/login')
+  }
+  const handleCreateBook = () => {
+    navigate('/create')
   }
   const handleHome = () => {
     navigate('/')
@@ -22,16 +26,31 @@ const AboutPage = () => {
   const handleContact = () => {
     navigate('/contact')
   }
+  const handleMainPage = () => {
+    navigate('/main')
+  }
+  const handleLoginOut = async () => {
+    try {
+      await firebase.auth().signOut()
+      setUser(null)
+      console.log('User signed out successfully')
+    } catch (error) {
+      console.error('Error signing out:', error)
+    }
+    alert('Logged out succsesfuly')
+    navigate('/')
+  }
+  const user = firebase.auth().currentUser
 
   return (
     <div className="auth-container">
       <nav className="navbar">
         <div className="logo-container">
-          <img src={logo} alt="Logo" className="logo" /> {/* Add the logo */}
+          <img src={logo} alt="Logo" className="logo" />
         </div>
       </nav>
-      <div class="navA">
-        <div class="menuA">
+      <div className="navA">
+        <div className="menuA">
           <li>
             <button className="menuBtn" onClick={handleHome}>
               home
@@ -47,16 +66,39 @@ const AboutPage = () => {
               contact
             </button>
           </li>
-          <li>
-            <button className="menuBtn" onClick={handleLoginPage}>
-              sign in
-            </button>
-          </li>
-          <li>
-            <button className="menuBtn" onClick={handleRegister}>
-              sign up
-            </button>
-          </li>
+          {!user && (
+            <>
+              <li>
+                <button className="menuBtn" onClick={handleLoginPage}>
+                  sign in
+                </button>
+              </li>
+              <li>
+                <button className="menuBtn" onClick={handleRegister}>
+                  sign up
+                </button>
+              </li>
+            </>
+          )}
+          {user && (
+            <>
+              <li>
+                <button className="menuBtn" onClick={handleMainPage}>
+                  Books Page
+                </button>
+              </li>
+              <li>
+                <button className="menuBtn" onClick={handleCreateBook}>
+                  Create Book
+                </button>
+              </li>
+              <li>
+                <button className="menuBtn" onClick={handleLoginOut}>
+                  log out
+                </button>
+              </li>
+            </>
+          )}
         </div>
       </div>
       <div className="white-box">
@@ -82,14 +124,6 @@ const AboutPage = () => {
             connect, and ignite the imagination of readers worldwide. Discover
             the magic of shared storytelling at Story Tell today!
           </p>
-          {/* <div className="auth-buttons">
-            <button className="login-button" onClick={handleLogin}>
-              Log In
-            </button>
-            <button className="signup-button" onClick={handleSignUp}>
-              Sign Up
-            </button>
-          </div> */}
         </div>
       </div>
     </div>

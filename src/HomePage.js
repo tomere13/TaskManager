@@ -3,8 +3,11 @@ import { useNavigate } from 'react-router-dom'
 import storyBg from './images/Story-Bg-4.jpg'
 import logo from './images/Story-Tell.png' // Import the logo image
 import './cssFolder/HomePage.css'
+import firebase from 'firebase/compat/app'
 
-const HomePage = () => {
+const HomePage = ({ setUser }) => {
+  const user = firebase.auth().currentUser
+
   const navigate = useNavigate()
   const handleRegister = () => {
     navigate('/register')
@@ -15,13 +18,29 @@ const HomePage = () => {
   const handleHome = () => {
     navigate('/')
   }
+  const handleCreateBook = () => {
+    navigate('/create')
+  }
   const handleAbout = () => {
     navigate('/about')
   }
   const handleContact = () => {
     navigate('/contact')
   }
-
+  const handleMainPage = () => {
+    navigate('/main')
+  }
+  const handleLoginOut = async () => {
+    try {
+      await firebase.auth().signOut()
+      setUser(null)
+      console.log('User signed out successfully')
+    } catch (error) {
+      console.error('Error signing out:', error)
+    }
+    alert('Logged out succsesfuly')
+    navigate('/')
+  }
   return (
     <div
       className="auth-container"
@@ -36,10 +55,10 @@ const HomePage = () => {
           <img src={logo} alt="Logo" className="logo" /> {/* Add the logo */}
         </div>
       </nav>
-      <div class="nav">
+      <div className="nav">
         {/* <input type="checkbox"></input> */}
 
-        <div class="menu">
+        <div className="menu">
           <li>
             <button className="menuBtn" onClick={handleHome}>
               home
@@ -55,16 +74,39 @@ const HomePage = () => {
               contact
             </button>
           </li>
-          <li>
-            <button className="menuBtn" onClick={handleLoginPage}>
-              sign in
-            </button>
-          </li>
-          <li>
-            <button className="menuBtn" onClick={handleRegister}>
-              sign up
-            </button>
-          </li>
+          {!user && (
+            <>
+              <li>
+                <button className="menuBtn" onClick={handleLoginPage}>
+                  sign in
+                </button>
+              </li>
+              <li>
+                <button className="menuBtn" onClick={handleRegister}>
+                  sign up
+                </button>
+              </li>
+            </>
+          )}
+          {user && (
+            <>
+              <li>
+                <button className="menuBtn" onClick={handleMainPage}>
+                  Books Page
+                </button>
+              </li>
+              <li>
+                <button className="menuBtn" onClick={handleCreateBook}>
+                  Create Book
+                </button>
+              </li>
+              <li>
+                <button className="menuBtn" onClick={handleLoginOut}>
+                  log out
+                </button>
+              </li>
+            </>
+          )}
         </div>
       </div>
       <div className="white-box">

@@ -1,7 +1,6 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client' // Import createRoot from "react-dom/client"
 import firebase from 'firebase/compat/app'
-
 import 'firebase/compat/auth'
 import App from './App'
 
@@ -18,4 +17,4 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig)
 
-ReactDOM.render(<App />, document.getElementById('root'))
+createRoot(document.getElementById('root')).render(<App />)

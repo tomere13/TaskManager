@@ -53,8 +53,8 @@ const Register = ({ setUser }) => {
           <img src={logo} alt="Logo" className="logo" /> {/* Add the logo */}
         </div>
       </nav>
-      <div class="navR">
-        <div class="menuR">
+      <div className="navR">
+        <div className="menuR">
           <li>
             <button className="menuBtn" onClick={handleHome}>
               home

@@ -6,7 +6,7 @@ import 'firebase/compat/auth'
 // Components
 import HomePage from './HomePage'
 import MainPage from './MainPage'
-
+import CreateBook from './CreateBook'
 import AuthPage from './AuthPage'
 import Register from './Register'
 import RestOfAppPage from './RestOfAppPage'
@@ -25,10 +25,7 @@ export default function App() {
 
     firebase
       .auth()
-      .setPersistence(firebase.auth.Auth.Persistence.LOCAL)
-      .then(() => {
-        return firebase.auth().signInAnonymously()
-      })
+      .setPersistence(firebase.auth.Auth.Persistence.SESSION)
       .catch((error) => {
         console.error('Error setting authentication persistence:', error)
       })
@@ -37,25 +34,34 @@ export default function App() {
   }, [])
 
   if (isLoading) {
-    return (
-      <div class="book">
-        <div class="book__pg-shadow"></div>
-        <div class="book__pg"></div>
-        <div class="book__pg book__pg--2"></div>
-        <div class="book__pg book__pg--3"></div>
-        <div class="book__pg book__pg--4"></div>
-        <div class="book__pg book__pg--5"></div>
-      </div>
-    )
+    return <p>Loading</p>
   }
 
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<AuthPage setUser={setUser} />} />
-          <Route path="/register" element={<Register setUser={setUser} />} />
+          <Route path="/" element={<HomePage setUser={setUser} />} />
+          <Route
+            path="/login"
+            element={
+              !user ? (
+                <AuthPage setUser={setUser} />
+              ) : (
+                <HomePage setUser={setUser} />
+              )
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              !user ? (
+                <Register setUser={setUser} />
+              ) : (
+                <HomePage setUser={setUser} />
+              )
+            }
+          />
           <Route path="/contact" element={<ContactPage setUser={setUser} />} />
           <Route path="/about" element={<AboutPage setUser={setUser} />} />
 
@@ -66,6 +72,16 @@ export default function App() {
                 <RestOfAppPage setUser={setUser} />
               ) : (
                 <Navigate to="/login" replace state={{ from: '/dashboard' }} />
+              )
+            }
+          />
+          <Route
+            path="/create"
+            element={
+              user ? (
+                <CreateBook setUser={setUser} />
+              ) : (
+                <Navigate to="/login" replace state={{ from: '/create' }} />
               )
             }
           />

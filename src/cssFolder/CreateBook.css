@@ -1,0 +1,176 @@
+.create-book-container {
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 50px;
+  border: 5px solid #883d1a;
+}
+
+.create-book-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+.input-container label {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.chapter-container {
+  margin-bottom: 20px;
+}
+
+.chapter-container label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.chapter-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.chapter-input input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.add-chapter-btn,
+.remove-chapter-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.add-chapter-btn:hover,
+.remove-chapter-btn:hover {
+  background-color: #0056b3;
+}
+
+.create-book-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.create-book-btn:hover {
+  background-color: #0056b3;
+}
+body,
+.navCreate,
+.menuCreate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navCreate {
+  position: fixed;
+  background-color: #fff;
+  padding: 20px;
+  transition: 0.5s;
+  border-radius: 50px;
+  overflow: hidden;
+  bottom: 71%;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.menuCreate {
+  margin: 0;
+  padding: 0;
+  width: 1000px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.menuCreate li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.menuCreate li a {
+  text-decoration: none;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.menuCreate li a:hover {
+  color: #161919;
+}
+
+.navCreate input {
+  width: 40px;
+  height: 10px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.navCreate span {
+  position: absolute;
+  left: 30px;
+  width: 30px;
+  height: 4px;
+  border-radius: 50px;
+  background-color: #666;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.navCreate input:checked ~ span {
+  background-color: #f974a1;
+}
+
+.navCreate span:nth-child(2) {
+  transform: translateY(-8px);
+}
+
+.navCreate input:checked ~ span:nth-child(2) {
+  transform: translateY(0) rotate(-45deg);
+}
+.navCreate span:nth-child(3) {
+  transform: translateY(8px);
+}
+
+.navCreate input:checked ~ span:nth-child(3) {
+  transform: translateY(0) rotate(45deg);
+}
+.menuBtn {
+  display: inline-block;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: #dbd7d5c7;
+  color: #633d2c;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}

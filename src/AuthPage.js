@@ -12,21 +12,37 @@ const AuthPage = ({ setUser }) => {
   const [error, setError] = useState('')
 
   const navigate = useNavigate()
+
   const handleRegister = () => {
     navigate('/register')
   }
+
   const handleLoginPage = () => {
     navigate('/login')
   }
-  const handleHome = () => {
-    navigate('/')
+
+  const handleHome = async () => {
+    try {
+      const user = firebase.auth().currentUser
+
+      if (user) {
+        navigate('/home')
+      } else {
+        navigate('/login')
+      }
+    } catch (error) {
+      setError(error.message)
+    }
   }
+
   const handleAbout = () => {
     navigate('/about')
   }
+
   const handleContact = () => {
     navigate('/contact')
   }
+
   const handleEmailChange = (e) => {
     setEmail(e.target.value)
   }
@@ -52,8 +68,8 @@ const AuthPage = ({ setUser }) => {
           <img src={logo} alt="Logo" className="logo" /> {/* Add the logo */}
         </div>
       </nav>
-      <div class="navAuth">
-        <div class="menuAuth">
+      <div className="navAuth">
+        <div className="menuAuth">
           <li>
             <button className="menuBtn" onClick={handleHome}>
               home
