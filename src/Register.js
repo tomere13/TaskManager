@@ -82,7 +82,7 @@ const Register = ({ setUser }) => {
           </li>
         </div>
       </div>
-      <div className="auth-form">
+      <div className="white-box">
         <h2>Sign Up</h2>
         <input
           type="email"

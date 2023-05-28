@@ -97,7 +97,7 @@ const AuthPage = ({ setUser }) => {
           </li>
         </div>
       </div>
-      <div className="auth-form">
+      <div className="white-box">
         <h2>Login</h2>
         <input
           type="email"
