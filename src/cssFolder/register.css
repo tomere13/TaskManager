@@ -191,7 +191,7 @@ body,
   .white-box {
     position: relative;
     width: 357px;
-    left: 2%;
+    left: 1.5%;
     height: 546px;
     margin: 5px;
     background-color: #fff;
@@ -208,7 +208,7 @@ body,
   }
   .menuBtn {
     display: inline-block;
-    padding: 12px 5px;
+    padding: 5px 0px;
     border: none;
     border-radius: 30px;
     background-color: #2f198611;

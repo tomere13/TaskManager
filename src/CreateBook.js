@@ -97,32 +97,32 @@ const CreateBook = ({ setUser }) => {
       <div className="navCreate">
         <div className="menuCreate">
           <li>
-            <button className="menuBtn" onClick={handleHome}>
+            <button className="menuBtnCreate" onClick={handleHome}>
               home
             </button>
           </li>
           <li>
-            <button className="menuBtn" onClick={handleAbout}>
+            <button className="menuBtnCreate" onClick={handleAbout}>
               about
             </button>
           </li>
           <li>
-            <button className="menuBtn" onClick={handleContact}>
+            <button className="menuBtnCreate" onClick={handleContact}>
               contact
             </button>
           </li>
           <li>
-            <button className="menuBtn" onClick={handleMainPage}>
+            <button className="menuBtnCreate" onClick={handleMainPage}>
               Books Page
             </button>
           </li>
           <li>
-            <button className="menuBtn" onClick={handleCreateBookPage}>
+            <button className="menuBtnCreate" onClick={handleCreateBookPage}>
               Create Book
             </button>
           </li>
           <li>
-            <button className="menuBtn" onClick={handleLoginOut}>
+            <button className="menuBtnCreate" onClick={handleLoginOut}>
               log out
             </button>
           </li>
