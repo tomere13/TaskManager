@@ -31,7 +31,20 @@
 .chapter-container {
   margin-bottom: 20px;
 }
-
+.menuBtnCreate {
+  display: inline-block;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: #dbd7d5c7;
+  color: #633d2c;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
 .chapter-container label {
   font-weight: 600;
   display: block;
