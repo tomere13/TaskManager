@@ -123,32 +123,32 @@ const MainPage = ({ setUser }) => {
       <div className="navM">
         <div className="menuM">
           <li>
-            <button className="menuBtn" onClick={handleHome}>
+            <button className="menuBtnMain" onClick={handleHome}>
               home
             </button>
           </li>
           <li>
-            <button className="menuBtn" onClick={handleAbout}>
+            <button className="menuBtnMain" onClick={handleAbout}>
               about
             </button>
           </li>
           <li>
-            <button className="menuBtn" onClick={handleContact}>
+            <button className="menuBtnMain" onClick={handleContact}>
               contact
             </button>
           </li>
           <li>
-            <button className="menuBtn" onClick={handleMainPage}>
+            <button className="menuBtnMain" onClick={handleMainPage}>
               Books Page
             </button>
           </li>
           <li>
-            <button className="menuBtn" onClick={handleCreateBook}>
+            <button className="menuBtnMain" onClick={handleCreateBook}>
               Create Book
             </button>
           </li>
           <li>
-            <button className="menuBtn" onClick={handleLoginOut}>
+            <button className="menuBtnMain" onClick={handleLoginOut}>
               log out
             </button>
           </li>

@@ -115,12 +115,7 @@ const HomePage = ({ setUser }) => {
             you're a novice writer or a seasoned wordsmith, you can start a
             story and invite others to finish or continue it, adding their
             unique twists and turns. Together, we will unlock a world of endless
-            possibilities, weaving narratives that will captivate readers and
-            leave them eagerly awaiting the next chapter. Join Story Tell today
-            and embark on a collaborative adventure that will ignite your
-            creativity and connect you with like-minded storytellers. Let your
-            imagination run wild and let the magic of shared storytelling
-            unfold.
+            possibilities.
           </p>
           <div className="auth-buttons">
             <button className="login-button" onClick={handleLoginPage}>

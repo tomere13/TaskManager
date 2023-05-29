@@ -114,13 +114,7 @@ const AboutPage = ({ setUser }) => {
             seeking fresh perspectives, Story Tell is the perfect place for you.
             With our user-friendly interface, you can start a story and invite
             others to join in, adding their own creative flair to your
-            narrative. The collaborative process ensures that each story becomes
-            a harmonious blend of diverse voices and ideas, resulting in truly
-            remarkable works of art. Join our vibrant community and unlock a
-            world of endless storytelling possibilities. Let's embark on this
-            journey together, where every page is an opportunity to inspire,
-            connect, and ignite the imagination of readers worldwide. Discover
-            the magic of shared storytelling at Story Tell today!
+            narrative.
           </p>
         </div>
       </div>
